@@ -11,7 +11,7 @@
 @implementation UIColor (Tools)
 
 // 生成随机颜色
-+(UIColor *)randomColor
++(UIColor *)xg_randomColor
 {
     CGFloat r = arc4random_uniform(256) / 255.0;
     CGFloat g = arc4random_uniform(256) / 255.0;

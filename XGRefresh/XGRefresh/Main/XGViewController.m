@@ -44,7 +44,7 @@ static NSUInteger count = 0;
             [weakSelf.tableView reloadData];
             
             // 让刷新控件停止刷新
-            [weakSelf.tableView.downRefreshView endRefreshing];
+            [weakSelf.tableView.downRefreshView xg_endRefreshing];
             
             count ++;
         });
@@ -66,7 +66,7 @@ static NSUInteger count = 0;
             NSIndexPath *lastRow = [NSIndexPath indexPathForRow:weakSelf.dataSource.count -1  inSection:0];
             
             // 让刷新控件停止刷新
-            [weakSelf.tableView.upRefreshView endRefreshing];
+            [weakSelf.tableView.upRefreshView xg_endRefreshing];
             [weakSelf.tableView scrollToRowAtIndexPath:lastRow atScrollPosition:UITableViewScrollPositionBottom animated:YES];
             count ++;
         });
@@ -89,7 +89,7 @@ static NSUInteger count = 0;
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (indexPath.row % 2 == 0) {
-        cell.contentView.backgroundColor = [UIColor randomColor];
+        cell.contentView.backgroundColor = [UIColor xg_randomColor];
     }
     cell.contentView.alpha = 0.8;
     cell.textLabel.font = [UIFont boldSystemFontOfSize:25];

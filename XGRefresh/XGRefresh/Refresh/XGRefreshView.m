@@ -90,7 +90,7 @@
 }
 
 #pragma mark - 停止刷新
--(void)endRefreshing{
+-(void)xg_endRefreshing{
     if (self.currentRefreshStatus == XGRefreshViewStatusRefreshing) {
         // 停止刷新
         [self.animationView stopAnimating];

@@ -41,5 +41,5 @@ typedef enum {
 @property (nonatomic, assign) XGRefreshViewStatus currentRefreshStatus;
 
 //// 结束刷新
-- (void)endRefreshing;
+- (void)xg_endRefreshing;
 @end
